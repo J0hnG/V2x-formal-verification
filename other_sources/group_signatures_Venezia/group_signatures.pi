@@ -1,0 +1,99 @@
+(* REGISTRATION
+Ciascun veicolo è dotato di un proprio ID ed enrollment certificate. Si reca presso la CA per ottenere una chiave privata di gruppo (associata al suo ID) e la chiave pubblica di gruppo.
+CANALE PRIVATO per fare questo passaggio. NOTA: occorre dare la possibilità all’attaccante di ottenere una chiave privata di gruppo
+*)
+
+
+
+free ch. 	(* Public channel *)
+
+
+(* Asymmetric signature *)
+fun pk/1.
+fun sign/2.
+fun ok/0.
+reduc checksign(sign(m, sk), m, pk(sk)) = ok.
+
+(* Asymmetric encryption *)
+fun aenc/2.
+reduc adec(aenc(m, pk(sk)), sk) = m.
+
+(* Certificate *)
+fun cert/2.
+reduc checkcert(cert(vpk, sk), pk(sk)) = ok.
+reduc getpk(cert(vpk, sk)) = vpk.
+
+(* Group signature *)
+					(* Group master secret key: gmsk *)
+fun gpk/1.				(* Group public key: gpk(gmsk) *)
+fun gsk/2.				(* Vehicle private group secret key: gsk(vid, gmsk) *)
+fun gsign/2.				(* gsign(m, gsk) *)
+fun gok/0.
+reduc gchecksign(gsign(m, gsk(vid, gmsk)), m, gpk(gmsk)) = gok.
+reduc gopen(gsign(m, gsk(vid, gmsk)), gmsk) = vid.
+
+
+(* Queries *)
+query ev:ValidGroupPrivateKeyReceived(vid, vgsk, vgpk).
+
+
+
+let Vehicle =
+	(* Request group private and public key *)
+	let req = vid in
+	let signreq = sign(vid, vsk) in
+	let encsignreq = aenc((req, signreq, vcert), capk) in
+	out(ch, encsignreq);
+	in(ch, encsignresp);
+	
+	(* Decrypt the response *)
+	let (resp, signature) = adec(encsignresp, vsk) in
+	(* Check signature *)
+	if checksign(signature, resp, capk) = ok then
+	(* Check vid in the response *)
+	let (rvid, vgsk, vgpk) = resp in
+	if rvid = vid then
+	
+	event ValidGroupPrivateKeyReceived(vid, vgsk, vgpk).
+	
+	
+let CA = 
+	in(ch, encsignreq);
+	(* Decrypt the request *)
+	let (req, signreq, vcert) = adec(encsignreq, cask) in
+	(* Check vehicle enrollment certificate *)
+	if checkcert(vcert, capk) = ok then
+	let vpk = getpk(vcert) in
+	(* Check if the enrollment certificate is revoked *)
+	(* TODO CHECK IF CERTIFICATE IS REVOKED *)
+	(* Check signature on request *)
+	if checksign(signreq, req, vpk) = ok then
+
+	event ValidRequestReceived(req, vcert);
+	
+	(* Create new group private secret key *)
+	let vgsk = gsk(req, gmsk) in
+	let resp = (req, vgsk, gpk(gmsk)) in
+	let signresp = sign(resp, cask) in
+	let encsignresp = aenc((resp, signresp), vpk) in
+	
+	out(ch, encsignresp).
+
+
+
+
+process 
+	(* Create CA group master secret key, public key and private key*)
+	new gmsk; new cask; 
+	let capk = pk(cask) in
+	out(ch, capk);
+	(* Create vehicles *)
+	!(	(* Enrollment certificate *)
+		new vid; 
+		new vsk; 
+		let vpk = pk(vsk) in
+		let vcert = cert(vpk, cask) in
+		Vehicle
+	    )	
+	| !CA
+
