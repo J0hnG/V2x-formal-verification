@@ -119,9 +119,6 @@ query sendervid:bitstring, receivervid:bitstring, m:bitstring, attpk:pkey;
 	event(ValidMessageReceived(receivervid, m)) ==> event(ValidMessageSent(sendervid, m)) || event(AttackerGetsEnrollmentCertificate(sendervid, attpk)).
 query vid:bitstring; event(RevokedVid(vid)).
 
-query attacker(new vid) phase 0.
-query attacker(new vid) phase 1.
-query attacker(new vid) phase 2.
 
 
 let VehicleSend(vid:bitstring, vgsk:gskey) = 
@@ -212,22 +209,13 @@ let CARevoke(gmsk:gmskey, cask: skey, capk:pkey) =
 	
 	(* Extract the vid from cert *)
 	let torevokevid = gopen(torevokecert, gmsk) in
-
-	(*inserito da phases*)
-	get revokedcerts(=torevokevid) in event AlreadyRevoked(torevokevid)
-	else
-
 	event RevokedVid(torevokevid);
-	insert revokedcerts(torevokevid);
+	insert revokedcerts(torevokevid).
 	
 
 	(* TODO INIZIALIZZO PROCESSO PER AGGIORNAMENTO CHIAVE DI GRUPPO *)
-	phase 1;
-	(* Update group master secret key *)
-	new updatedgmsk:gmskey;
-	(* Start new phase: not revoked vehicles have to ask for a new key *)
-	phase 2;
-	!CA(updatedgmsk, cask, capk).
+
+
 	
 let CA(gmsk:gmskey, cask: skey, capk:pkey) = 
 	in(ch, encsignreq:bitstring);
@@ -280,5 +268,4 @@ process
 	)	
 	| !CA(gmsk, cask, capk)
 	| !CARevoke(gmsk, cask, capk)
-	(*provo ad inserire da qui*)
-	| phase 1; out(ch, gmsk)
+
