@@ -1,0 +1,109 @@
+--PERFECT FORWARD SECRECY--
+
+query attacker(new vid).
+
+In questo caso l'attaccante ottiene, ad un certo punto, la group master secret
+key dell'RSU aggiornata, a seguito di una revoca, ma questo non dovrebbe invalidare
+i messaggi scambiati usando la vecchia gmsk. Questo è verificato
+simulando, a seguito della fase 2, l'assenza di attività da parte dei veicoli: non essendoci
+alcun messaggio scambiato usando la nuova gmsk, l'attaccante non può ottenere in alcun modo
+il vid
+
+Query not attacker_p5(vid[!1 = v]) is true.
+
+
+
+
+--Q1.1--
+
+event(ValidGroupPrivateKeyReceived(vid, vgsk, vgpk)).
+
+Un veicolo onesto dovrebbe poter sempre richiedere la group private key
+
+result: not event FALSE
+
+--Q1.2--
+Sanity check: Attacker can get a valid group key - result: FALSE - TRUE
+
+event(ValidGroupPrivateKeySent(vid, vgsk, vgpk)) ==> event(ValidGroupKeyRequestSent(vid)).
+
+event(ValidGroupPrivateKeySent(vid, vgsk, vgpk)) ==> event(ValidGroupKeyRequestSent(vid)) || event(AttackerGetsEnrollmentCertificate(vid, attpk)).
+
+result: as previous
+
+--Q1.3--
+Sanity check: Vehicle/Attacker cannot get a valid group key when it is revoked - result: not event FALSE, TRUE
+
+query vid:bitstring; event(RevokedCannotGetGroupKey(vid)). 
+ query vid:bitstring; event(RevokedCannotGetGroupKey(vid)) ==> event(RevokedVid(vid)).
+
+result: as previous
+
+--Q1.4--
+Sanity check: Vehicle sends broadcast message - result: not event FALSE OK
+
+event(ValidMessageSent(vid, vpseudocert, m)).
+
+--Q1.5--
+Sanity check: Attacker sends broadcast message - result: FALSE, TRUE OK
+
+query sendervid:bitstring, vpseudocert:certype, receivervid:bitstring, m:bitstring;
+	event(ValidMessageReceived(receivervid, m)) ==> event(ValidMessageSent(sendervid, vpseudocert, m)).
+query sendervid:bitstring, vpseudocert:certype, receivervid:bitstring, m:bitstring, attpk:pkey;
+	event(ValidMessageReceived(receivervid, m)) ==> event(ValidMessageSent(sendervid, vpseudocert, m)) || event(AttackerGetsEnrollmentCertificate(sendervid, attpk)).
+--Q1.6--
+Sanity check: not event AlreadyRevoked - result: not event FALSE OK
+
+query vid:bitstring; event(AlreadyRevoked(vid)).
+
+--Q1.7--
+Sanity check: attacker can ask revocation of another vehicle - result: FALSE
+
+query torevokecert:certype, vcert:certype, vid:bitstring; event(ValidRevocationReportReceived(torevokecert, vcert)) ==> event(RevocationAsked(vid, vcert, torevokecert)). 
+ query torevokecert:certype, vcert:certype, vid:bitstring, attpk:pkey; 
+	event(ValidRevocationReportReceived(torevokecert, vcert)) ==> event(RevocationAsked(vid, vcert, torevokecert)) || event(AttackerGetsEnrollmentCertificate(vid, attpk)).
+RESULT: FALSE, TRUE
+
+--Qx.x--
+Temporal constraint: revoked cannot get key and revoke event 
+
+ query vid:bitstring, t1:time, t2:time; event(RevokedCannotGetGroupKey(vid))@t2 && event(RevokedVid(vid))@t1 ==> t1 < t2. 
+result: cannot be proved
+
+--Qx.2--
+Temporal constraint: cannot receive a valid message from a vehicle that has been removed
+
+query sendervid:bitstring, vpseudocert:certype, receivervid:bitstring, m:bitstring, t1:time, t2:time, t3:time; 
+event(ValidMessageSent(sendervid, vpseudocert, m))@t1 && event(ValidMessageReceived(receivervid, m))@t2 && event(RevokedVid(sendervid))@t3 ==> t1 < t2 && t2 < t3.
+
+RESULT: FALSE.
+
+--Qx.3--
+ulteriore verifica che se ottengo un messaggio da un veicolo revocato,
+non deve essere valido
+
+ query sendervid:bitstring, t1:time, t2:time; event(ValidMessageReceivedSenderVid(sendervid))@t1 && event(RevokedVid(sendervid))@t2 ==> t1 < t2. 
+
+result: FALSE
+
+--Q2.1--
+Authentication of RSU in Vehicle Registration
+
+query vid:bitstring, vgsk:gskey, vgpk:gpkey, cask:skey; event(ValidGroupPrivateKeyReceived(vid, vgsk, vgpk)) 
+==> event(ValidGroupPrivateKeySent(vid, vgsk, vgpk)) || attacker(cask).
+
+result: TRUE
+
+--Q2.2--
+Authentication of the Vehilce in Vehicle Registration
+
+query cask:skey, vid:bitstring, attpk:pkey; 
+	event(ValidGroupKeyRequestReceived(cask, vid)) ==> event(ValidGroupKeyRequestSent(vid)) || event(AttackerGetsEnrollmentCertificate(vid, attpk)). 
+
+without gmsk leak: true.
+
+with gmsk leak: true.
+
+
+
+
