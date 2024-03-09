@@ -349,9 +349,9 @@ process
 		new vsk:skey; 
 		let vpk = pk(vsk) in
 		let vcert = cert(vid, vpk, cask) in
-		( Vehicle(vid, vsk, vcert, capk) (*| 
+		( Vehicle(vid, vsk, vcert, capk) | 
 		  phase 2;
-		  Vehicle(vid, vsk, vcert, capk)*)
+		  Vehicle(vid, vsk, vcert, capk)
 		)
 	  )
 	(* Attacker can get enrollment certificates *)
