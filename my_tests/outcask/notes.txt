@@ -17,6 +17,9 @@ decada nella fase 5, anche se i veicoli non scambiano alcun tipo di messaggio do
 
 Query not attacker_p5(vid[!1 = v]) is false.
 
+//TRACE GRAFICA
+
+
 
 --Q1.1--
 
@@ -24,7 +27,8 @@ event(ValidGroupPrivateKeyReceived(vid, vgsk, vgpk)).
 
 Un veicolo onesto dovrebbe poter sempre richiedere la group private key
 
-result: not event FALSE
+
+result: not event FALSE-->different traces
 
 --Q1.2--
 Sanity check: Attacker can get a valid group key - result: FALSE - TRUE
@@ -44,17 +48,19 @@ query vid:bitstring; event(RevokedCannotGetGroupKey(vid)).
 result: as previous
 
 --Q1.4--
-Sanity check: Vehicle sends broadcast message - result: not event FALSE OK
+Sanity check: Vehicle sends broadcast message - result: not event FALSE OK-->Different traces
 
 event(ValidMessageSent(vid, vpseudocert, m)).
 
 --Q1.5--
-Sanity check: Attacker sends broadcast message - result: FALSE, TRUE OK
+Sanity check: Attacker sends broadcast message - result: FALSE, TRUE
 
 query sendervid:bitstring, vpseudocert:certype, receivervid:bitstring, m:bitstring;
 	event(ValidMessageReceived(receivervid, m)) ==> event(ValidMessageSent(sendervid, vpseudocert, m)).
 query sendervid:bitstring, vpseudocert:certype, receivervid:bitstring, m:bitstring, attpk:pkey;
 	event(ValidMessageReceived(receivervid, m)) ==> event(ValidMessageSent(sendervid, vpseudocert, m)) || event(AttackerGetsEnrollmentCertificate(sendervid, attpk)).
+
+RESULT: FALSE, FALSE -->Check differencies in the trace
 --Q1.6--
 Sanity check: not event AlreadyRevoked - result: not event FALSE OK
 

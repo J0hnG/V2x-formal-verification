@@ -178,7 +178,7 @@ query sendervid:bitstring, vpseudocert:certype, receivervid:bitstring, m:bitstri
 	event(ValidGroupKeyRequestReceived(cask, vid)) ==> event(ValidGroupKeyRequestSent(vid)) || event(AttackerGetsEnrollmentCertificate(vid, attpk)). *)
 
 
-query attacker(new vid).
+(*query attacker(new vid).*)
 
 
 let CASecretKeyReveal(cask:skey) = 
@@ -365,7 +365,7 @@ process
 	)	
 	| !CA(gmsk, cask, capk)
 	| !CARevoke(gmsk, cask, capk)
-	| phase 5; CASecretKeyReveal(cask)
+	| phase 1; CASecretKeyReveal(cask)
 
 	
 

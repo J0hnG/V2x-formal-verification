@@ -853,6 +853,25 @@ P0_1_0__52 -> P0_1_0__53 [label = <>, weight = 100]
 P0_0__45 -> P0_0__46 [label = <>, weight = 100]
 P__67 -> P__68 [label = <>, weight = 100]
 {rank = same; P__68 P0_0__46 P0_1_0__53 P0_1_1__49 P0_2_0__49 P0_2_1__45 P0_2_2__41 P0_3_0__34 P0_3_1__32 P0_4_0_0__28 P0_4_0_1__31 P0_4_1_0__26 P0_4_1_1_0_0__39 P0_4_1_1_1__28 P0_4_1_1_2__28 P0_4_2_0__19}
+P0_1_1__49 -> P0_1_1__50 [label = <>, weight = 100]
+P0_1_1__50 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD>Beginning of process <FONT COLOR="darkgreen">CASecretKeyReveal</FONT></TD></TR><TR><TD><FONT COLOR="darkgreen">{157}</FONT><FONT COLOR="blue">event</FONT> CASKReveal(cask_4)</TD></TR></TABLE>>]
+P0_1_1__50 -> P0_1_1__51 [label = <>, weight = 100]
+P0_1_1__51 -> P0_1_1__52 [label = <>, weight = 100]
+P0_1_0__53 -> P0_1_0__54 [label = <>, weight = 100]
+P0_0__46 -> P0_0__47 [label = <>, weight = 100]
+P__68 -> P__69 [label = <>, weight = 100]
+{rank = same; P__69 P0_0__47 P0_1_0__54 P0_1_1__52}
+P0_1_1__52 -> P0_1_1__53 [label = <>, weight = 100]
+P__69 -> P__70 [label = <>, weight = 100]
+{rank = same; P__70 P0_1_1__53}
+P0_1_1__53 -> P__70 [label = <~M_20 = cask_4>, arrowhead = normal]
+P0_1_1__53 -> P0_1_1__54 [label = <>, weight = 100]
+P0_1_0__54 -> P0_1_0__55 [label = <>, weight = 100]
+P0_0__47 -> P0_0__48 [label = <>, weight = 100]
+P__70 -> P__71 [label = <>, weight = 100]
+{rank = same; P__71 P0_0__48 P0_1_0__55 P0_1_1__54}
+P0_1_1__55 [label = "", width = 0.3, height = 0.3]
+P0_1_1__54 -> P0_1_1__55 [label = <>, weight = 100]
 P0_4_0_0__28 -> P0_4_0_0__29 [label = <>, weight = 100]
 P0_4_0_0__29 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD><FONT COLOR="darkgreen">{133}</FONT><FONT COLOR="blue">new </FONT>updatedgmsk_2</TD></TR></TABLE>>]
 P0_4_0_0__29 -> P0_4_0_0__30 [label = <>, weight = 100]
@@ -876,15 +895,16 @@ P0_2_1__46 [label = "", style = invisible]
 P0_2_1__45 -> P0_2_1__46 [label = <>, weight = 100, style = invisible]
 P0_2_0__50 [label = "", style = invisible]
 P0_2_0__49 -> P0_2_0__50 [label = <>, weight = 100, style = invisible]
-P0_1_1__49 -> P0_1_1__50 [label = <>, weight = 100]
-P0_1_0__53 -> P0_1_0__54 [label = <>, weight = 100]
-P0_0__46 -> P0_0__47 [label = <>, weight = 100]
-P__68 -> P__69 [label = <>, weight = 100]
-{rank = same; P__69 P0_0__47 P0_1_0__54 P0_1_1__50 P0_2_0__50 P0_2_1__46 P0_2_2__42 P0_3_0__35 P0_3_1__33 P0_4_0_0__31 P0_4_0_1__32 P0_4_1_0__27 P0_4_1_1_0_0__40 P0_4_1_1_1__29 P0_4_1_1_2__29 P0_4_2_0__20}
+P0_1_1__56 [label = "", style = invisible]
+P0_1_1__55 -> P0_1_1__56 [label = <>, weight = 100, style = invisible]
+P0_1_0__55 -> P0_1_0__56 [label = <>, weight = 100]
+P0_0__48 -> P0_0__49 [label = <>, weight = 100]
+P__71 -> P__72 [label = <>, weight = 100]
+{rank = same; P__72 P0_0__49 P0_1_0__56 P0_1_1__56 P0_2_0__50 P0_2_1__46 P0_2_2__42 P0_3_0__35 P0_3_1__33 P0_4_0_0__31 P0_4_0_1__32 P0_4_1_0__27 P0_4_1_1_0_0__40 P0_4_1_1_1__29 P0_4_1_1_2__29 P0_4_2_0__20}
 P0_4_2_0__20 -> P0_4_2_0__21 [label = <>, weight = 100]
-P__69 -> P__70 [label = <>, weight = 100]
-{rank = same; P__70 P0_4_2_0__21}
-P0_4_2_0__21 -> P__70 [label = <Phase 2>, style = dotted]
+P__72 -> P__73 [label = <>, weight = 100]
+{rank = same; P__73 P0_4_2_0__21}
+P0_4_2_0__21 -> P__73 [label = <Phase 2>, style = dotted]
 P0_4_2_0__21 -> P0_4_2_0__22 [label = <>, weight = 100]
 P0_4_1_1_2__30 [label = "", style = invisible]
 P0_4_1_1_2__29 -> P0_4_1_1_2__30 [label = <>, weight = 100, style = invisible]
@@ -905,11 +925,12 @@ P0_2_1__47 [label = "", style = invisible]
 P0_2_1__46 -> P0_2_1__47 [label = <>, weight = 100, style = invisible]
 P0_2_0__51 [label = "", style = invisible]
 P0_2_0__50 -> P0_2_0__51 [label = <>, weight = 100, style = invisible]
-P0_1_1__50 -> P0_1_1__51 [label = <>, weight = 100]
-P0_1_0__54 -> P0_1_0__55 [label = <>, weight = 100]
-P0_0__47 -> P0_0__48 [label = <>, weight = 100]
-P__70 -> P__71 [label = <>, weight = 100]
-{rank = same; P__71 P0_0__48 P0_1_0__55 P0_1_1__51 P0_2_0__51 P0_2_1__47 P0_2_2__43 P0_3_0__36 P0_3_1__34 P0_4_0_0__32 P0_4_0_1__33 P0_4_1_0__28 P0_4_1_1_0_0__41 P0_4_1_1_1__30 P0_4_1_1_2__30 P0_4_2_0__22}
+P0_1_1__57 [label = "", style = invisible]
+P0_1_1__56 -> P0_1_1__57 [label = <>, weight = 100, style = invisible]
+P0_1_0__56 -> P0_1_0__57 [label = <>, weight = 100]
+P0_0__49 -> P0_0__50 [label = <>, weight = 100]
+P__73 -> P__74 [label = <>, weight = 100]
+{rank = same; P__74 P0_0__50 P0_1_0__57 P0_1_1__57 P0_2_0__51 P0_2_1__47 P0_2_2__43 P0_3_0__36 P0_3_1__34 P0_4_0_0__32 P0_4_0_1__33 P0_4_1_0__28 P0_4_1_1_0_0__41 P0_4_1_1_1__30 P0_4_1_1_2__30 P0_4_2_0__22}
 P0_4_0_0__32 [label = "!", shape = ellipse]
 {rank = same; P0_4_0_0_1__32 P0_4_0_0_0__32}
 P0_4_0_0_1__32 [label = "", fixedsize = false, width = 0, height = 0, shape = none]
@@ -938,15 +959,16 @@ P0_2_1__48 [label = "", style = invisible]
 P0_2_1__47 -> P0_2_1__48 [label = <>, weight = 100, style = invisible]
 P0_2_0__52 [label = "", style = invisible]
 P0_2_0__51 -> P0_2_0__52 [label = <>, weight = 100, style = invisible]
-P0_1_1__51 -> P0_1_1__52 [label = <>, weight = 100]
-P0_1_0__55 -> P0_1_0__56 [label = <>, weight = 100]
-P0_0__48 -> P0_0__49 [label = <>, weight = 100]
-P__71 -> P__72 [label = <>, weight = 100]
-{rank = same; P__72 P0_0__49 P0_1_0__56 P0_1_1__52 P0_2_0__52 P0_2_1__48 P0_2_2__44 P0_3_0__37 P0_3_1__35 P0_4_0_0_0__35 P0_4_0_0_1__35 P0_4_0_1__36}
+P0_1_1__58 [label = "", style = invisible]
+P0_1_1__57 -> P0_1_1__58 [label = <>, weight = 100, style = invisible]
+P0_1_0__57 -> P0_1_0__58 [label = <>, weight = 100]
+P0_0__50 -> P0_0__51 [label = <>, weight = 100]
+P__74 -> P__75 [label = <>, weight = 100]
+{rank = same; P__75 P0_0__51 P0_1_0__58 P0_1_1__58 P0_2_0__52 P0_2_1__48 P0_2_2__44 P0_3_0__37 P0_3_1__35 P0_4_0_0_0__35 P0_4_0_0_1__35 P0_4_0_1__36}
 P0_4_0_1__36 -> P0_4_0_1__37 [label = <>, weight = 100]
-P__72 -> P__73 [label = <>, weight = 100]
-{rank = same; P__73 P0_4_0_1__37}
-P0_4_0_1__37 -> P__73 [label = <~M_20 = aenc((groupkey_request,sign(groupkey_request,<br/>
+P__75 -> P__76 [label = <>, weight = 100]
+{rank = same; P__76 P0_4_0_1__37}
+P0_4_0_1__37 -> P__76 [label = <~M_21 = aenc((groupkey_request,sign(groupkey_request,<br/>
 vsk_6),cert(vid_14,pk(vsk_6),cask_4)),pk(cask_4))>, arrowhead = normal]
 P0_4_0_1__37 -> P0_4_0_1__38 [label = <>, weight = 100]
 P0_4_0_0_1__35 -> P0_4_0_0_1__36 [label = <>, weight = 100]
@@ -961,11 +983,12 @@ P0_2_1__49 [label = "", style = invisible]
 P0_2_1__48 -> P0_2_1__49 [label = <>, weight = 100, style = invisible]
 P0_2_0__53 [label = "", style = invisible]
 P0_2_0__52 -> P0_2_0__53 [label = <>, weight = 100, style = invisible]
-P0_1_1__52 -> P0_1_1__53 [label = <>, weight = 100]
-P0_1_0__56 -> P0_1_0__57 [label = <>, weight = 100]
-P0_0__49 -> P0_0__50 [label = <>, weight = 100]
-P__73 -> P__74 [label = <>, weight = 100]
-{rank = same; P__74 P0_0__50 P0_1_0__57 P0_1_1__53 P0_2_0__53 P0_2_1__49 P0_2_2__45 P0_3_0__38 P0_3_1__36 P0_4_0_0_0__36 P0_4_0_0_1__36 P0_4_0_1__38}
+P0_1_1__59 [label = "", style = invisible]
+P0_1_1__58 -> P0_1_1__59 [label = <>, weight = 100, style = invisible]
+P0_1_0__58 -> P0_1_0__59 [label = <>, weight = 100]
+P0_0__51 -> P0_0__52 [label = <>, weight = 100]
+P__76 -> P__77 [label = <>, weight = 100]
+{rank = same; P__77 P0_0__52 P0_1_0__59 P0_1_1__59 P0_2_0__53 P0_2_1__49 P0_2_2__45 P0_3_0__38 P0_3_1__36 P0_4_0_0_0__36 P0_4_0_0_1__36 P0_4_0_1__38}
 P0_4_1_0__28 -> P0_4_1_0__29 [label = <>, weight = 100]
 P0_4_1_0__29 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD>Beginning of process <FONT COLOR="darkgreen">Vehicle</FONT></TD></TR><TR><TD><FONT COLOR="darkgreen">{56}</FONT><FONT COLOR="blue">event</FONT> ValidGroupKeyRequestSent(vid_15)</TD></TR></TABLE>>]
 P0_4_1_0__29 -> P0_4_1_0__30 [label = <>, weight = 100]
@@ -983,15 +1006,16 @@ P0_2_1__50 [label = "", style = invisible]
 P0_2_1__49 -> P0_2_1__50 [label = <>, weight = 100, style = invisible]
 P0_2_0__54 [label = "", style = invisible]
 P0_2_0__53 -> P0_2_0__54 [label = <>, weight = 100, style = invisible]
-P0_1_1__53 -> P0_1_1__54 [label = <>, weight = 100]
-P0_1_0__57 -> P0_1_0__58 [label = <>, weight = 100]
-P0_0__50 -> P0_0__51 [label = <>, weight = 100]
-P__74 -> P__75 [label = <>, weight = 100]
-{rank = same; P__75 P0_0__51 P0_1_0__58 P0_1_1__54 P0_2_0__54 P0_2_1__50 P0_2_2__46 P0_3_0__39 P0_3_1__37 P0_4_0_0_0__37 P0_4_0_0_1__37 P0_4_0_1__39 P0_4_1_0__31}
+P0_1_1__60 [label = "", style = invisible]
+P0_1_1__59 -> P0_1_1__60 [label = <>, weight = 100, style = invisible]
+P0_1_0__59 -> P0_1_0__60 [label = <>, weight = 100]
+P0_0__52 -> P0_0__53 [label = <>, weight = 100]
+P__77 -> P__78 [label = <>, weight = 100]
+{rank = same; P__78 P0_0__53 P0_1_0__60 P0_1_1__60 P0_2_0__54 P0_2_1__50 P0_2_2__46 P0_3_0__39 P0_3_1__37 P0_4_0_0_0__37 P0_4_0_0_1__37 P0_4_0_1__39 P0_4_1_0__31}
 P0_4_1_0__31 -> P0_4_1_0__32 [label = <>, weight = 100]
-P__75 -> P__76 [label = <>, weight = 100]
-{rank = same; P__76 P0_4_1_0__32}
-P0_4_1_0__32 -> P__76 [label = <~M_21 = aenc((groupkey_request,sign(groupkey_request,<br/>
+P__78 -> P__79 [label = <>, weight = 100]
+{rank = same; P__79 P0_4_1_0__32}
+P0_4_1_0__32 -> P__79 [label = <~M_22 = aenc((groupkey_request,sign(groupkey_request,<br/>
 vsk_7),cert(vid_15,pk(vsk_7),cask_4)),pk(cask_4))>, arrowhead = normal]
 P0_4_1_0__32 -> P0_4_1_0__33 [label = <>, weight = 100]
 P0_4_0_1__39 -> P0_4_0_1__40 [label = <>, weight = 100]
@@ -1007,11 +1031,12 @@ P0_2_1__51 [label = "", style = invisible]
 P0_2_1__50 -> P0_2_1__51 [label = <>, weight = 100, style = invisible]
 P0_2_0__55 [label = "", style = invisible]
 P0_2_0__54 -> P0_2_0__55 [label = <>, weight = 100, style = invisible]
-P0_1_1__54 -> P0_1_1__55 [label = <>, weight = 100]
-P0_1_0__58 -> P0_1_0__59 [label = <>, weight = 100]
-P0_0__51 -> P0_0__52 [label = <>, weight = 100]
-P__76 -> P__77 [label = <>, weight = 100]
-{rank = same; P__77 P0_0__52 P0_1_0__59 P0_1_1__55 P0_2_0__55 P0_2_1__51 P0_2_2__47 P0_3_0__40 P0_3_1__38 P0_4_0_0_0__38 P0_4_0_0_1__38 P0_4_0_1__40 P0_4_1_0__33}
+P0_1_1__61 [label = "", style = invisible]
+P0_1_1__60 -> P0_1_1__61 [label = <>, weight = 100, style = invisible]
+P0_1_0__60 -> P0_1_0__61 [label = <>, weight = 100]
+P0_0__53 -> P0_0__54 [label = <>, weight = 100]
+P__79 -> P__80 [label = <>, weight = 100]
+{rank = same; P__80 P0_0__54 P0_1_0__61 P0_1_1__61 P0_2_0__55 P0_2_1__51 P0_2_2__47 P0_3_0__40 P0_3_1__38 P0_4_0_0_0__38 P0_4_0_0_1__38 P0_4_0_1__40 P0_4_1_0__33}
 P0_4_2_0__22 -> P0_4_2_0__23 [label = <>, weight = 100]
 P0_4_2_0__23 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD>Beginning of process <FONT COLOR="darkgreen">Vehicle</FONT></TD></TR><TR><TD><FONT COLOR="darkgreen">{56}</FONT><FONT COLOR="blue">event</FONT> ValidGroupKeyRequestSent(vid_16)</TD></TR></TABLE>>]
 P0_4_2_0__23 -> P0_4_2_0__24 [label = <>, weight = 100]
@@ -1036,15 +1061,16 @@ P0_2_1__52 [label = "", style = invisible]
 P0_2_1__51 -> P0_2_1__52 [label = <>, weight = 100, style = invisible]
 P0_2_0__56 [label = "", style = invisible]
 P0_2_0__55 -> P0_2_0__56 [label = <>, weight = 100, style = invisible]
-P0_1_1__55 -> P0_1_1__56 [label = <>, weight = 100]
-P0_1_0__59 -> P0_1_0__60 [label = <>, weight = 100]
-P0_0__52 -> P0_0__53 [label = <>, weight = 100]
-P__77 -> P__78 [label = <>, weight = 100]
-{rank = same; P__78 P0_0__53 P0_1_0__60 P0_1_1__56 P0_2_0__56 P0_2_1__52 P0_2_2__48 P0_3_0__41 P0_3_1__39 P0_4_0_0_0__39 P0_4_0_0_1__39 P0_4_0_1__41 P0_4_1_0__34 P0_4_1_1_0_0__42 P0_4_1_1_1__31 P0_4_1_1_2__31 P0_4_2_0__25}
+P0_1_1__62 [label = "", style = invisible]
+P0_1_1__61 -> P0_1_1__62 [label = <>, weight = 100, style = invisible]
+P0_1_0__61 -> P0_1_0__62 [label = <>, weight = 100]
+P0_0__54 -> P0_0__55 [label = <>, weight = 100]
+P__80 -> P__81 [label = <>, weight = 100]
+{rank = same; P__81 P0_0__55 P0_1_0__62 P0_1_1__62 P0_2_0__56 P0_2_1__52 P0_2_2__48 P0_3_0__41 P0_3_1__39 P0_4_0_0_0__39 P0_4_0_0_1__39 P0_4_0_1__41 P0_4_1_0__34 P0_4_1_1_0_0__42 P0_4_1_1_1__31 P0_4_1_1_2__31 P0_4_2_0__25}
 P0_4_2_0__25 -> P0_4_2_0__26 [label = <>, weight = 100]
-P__78 -> P__79 [label = <>, weight = 100]
-{rank = same; P__79 P0_4_2_0__26}
-P0_4_2_0__26 -> P__79 [label = <~M_22 = aenc((groupkey_request,sign(groupkey_request,<br/>
+P__81 -> P__82 [label = <>, weight = 100]
+{rank = same; P__82 P0_4_2_0__26}
+P0_4_2_0__26 -> P__82 [label = <~M_23 = aenc((groupkey_request,sign(groupkey_request,<br/>
 vsk_8),cert(vid_16,pk(vsk_8),cask_4)),pk(cask_4))>, arrowhead = normal]
 P0_4_2_0__26 -> P0_4_2_0__27 [label = <>, weight = 100]
 P0_4_1_1_2__32 [label = "", style = invisible]
@@ -1067,11 +1093,12 @@ P0_2_1__53 [label = "", style = invisible]
 P0_2_1__52 -> P0_2_1__53 [label = <>, weight = 100, style = invisible]
 P0_2_0__57 [label = "", style = invisible]
 P0_2_0__56 -> P0_2_0__57 [label = <>, weight = 100, style = invisible]
-P0_1_1__56 -> P0_1_1__57 [label = <>, weight = 100]
-P0_1_0__60 -> P0_1_0__61 [label = <>, weight = 100]
-P0_0__53 -> P0_0__54 [label = <>, weight = 100]
-P__79 -> P__80 [label = <>, weight = 100]
-{rank = same; P__80 P0_0__54 P0_1_0__61 P0_1_1__57 P0_2_0__57 P0_2_1__53 P0_2_2__49 P0_3_0__42 P0_3_1__40 P0_4_0_0_0__40 P0_4_0_0_1__40 P0_4_0_1__42 P0_4_1_0__35 P0_4_1_1_0_0__43 P0_4_1_1_1__32 P0_4_1_1_2__32 P0_4_2_0__27}
+P0_1_1__63 [label = "", style = invisible]
+P0_1_1__62 -> P0_1_1__63 [label = <>, weight = 100, style = invisible]
+P0_1_0__62 -> P0_1_0__63 [label = <>, weight = 100]
+P0_0__55 -> P0_0__56 [label = <>, weight = 100]
+P__82 -> P__83 [label = <>, weight = 100]
+{rank = same; P__83 P0_0__56 P0_1_0__63 P0_1_1__63 P0_2_0__57 P0_2_1__53 P0_2_2__49 P0_3_0__42 P0_3_1__40 P0_4_0_0_0__40 P0_4_0_0_1__40 P0_4_0_1__42 P0_4_1_0__35 P0_4_1_1_0_0__43 P0_4_1_1_1__32 P0_4_1_1_2__32 P0_4_2_0__27}
 P0_4_0_0_1__40 -> P0_4_0_0_1__41 [label = <>, weight = 100]
 P0_4_0_0_0__40 -> P0_4_0_0_0__41 [label = <>, weight = 100]
 P0_3_1__41 [label = "", style = invisible]
@@ -1084,15 +1111,16 @@ P0_2_1__54 [label = "", style = invisible]
 P0_2_1__53 -> P0_2_1__54 [label = <>, weight = 100, style = invisible]
 P0_2_0__58 [label = "", style = invisible]
 P0_2_0__57 -> P0_2_0__58 [label = <>, weight = 100, style = invisible]
-P0_1_1__57 -> P0_1_1__58 [label = <>, weight = 100]
-P0_1_0__61 -> P0_1_0__62 [label = <>, weight = 100]
-P0_0__54 -> P0_0__55 [label = <>, weight = 100]
-P__80 -> P__81 [label = <>, weight = 100]
-{rank = same; P__81 P0_0__55 P0_1_0__62 P0_1_1__58 P0_2_0__58 P0_2_1__54 P0_2_2__50 P0_3_0__43 P0_3_1__41 P0_4_0_0_0__41 P0_4_0_0_1__41}
+P0_1_1__64 [label = "", style = invisible]
+P0_1_1__63 -> P0_1_1__64 [label = <>, weight = 100, style = invisible]
+P0_1_0__63 -> P0_1_0__64 [label = <>, weight = 100]
+P0_0__56 -> P0_0__57 [label = <>, weight = 100]
+P__83 -> P__84 [label = <>, weight = 100]
+{rank = same; P__84 P0_0__57 P0_1_0__64 P0_1_1__64 P0_2_0__58 P0_2_1__54 P0_2_2__50 P0_3_0__43 P0_3_1__41 P0_4_0_0_0__41 P0_4_0_0_1__41}
 P0_4_0_0_1__41 -> P0_4_0_0_1__42 [label = <>, weight = 100]
-P__81 -> P__82 [label = <>, weight = 100]
-{rank = same; P__82 P0_4_0_0_1__42}
-P0_4_0_0_1__42 -> P__82 [label = <~X_3>, dir = back, arrowhead = normal]
+P__84 -> P__85 [label = <>, weight = 100]
+{rank = same; P__85 P0_4_0_0_1__42}
+P0_4_0_0_1__42 -> P__85 [label = <~X_3>, dir = back, arrowhead = normal]
 P0_4_0_0_1__42 -> P0_4_0_0_1__43 [label = <>, weight = 100]
 P0_4_0_0_0__41 -> P0_4_0_0_0__42 [label = <>, weight = 100]
 P0_3_1__42 [label = "", style = invisible]
@@ -1105,19 +1133,20 @@ P0_2_1__55 [label = "", style = invisible]
 P0_2_1__54 -> P0_2_1__55 [label = <>, weight = 100, style = invisible]
 P0_2_0__59 [label = "", style = invisible]
 P0_2_0__58 -> P0_2_0__59 [label = <>, weight = 100, style = invisible]
-P0_1_1__58 -> P0_1_1__59 [label = <>, weight = 100]
-P0_1_0__62 -> P0_1_0__63 [label = <>, weight = 100]
-P0_0__55 -> P0_0__56 [label = <>, weight = 100]
-P__82 -> P__83 [label = <>, weight = 100]
-{rank = same; P__83 P0_0__56 P0_1_0__63 P0_1_1__59 P0_2_0__59 P0_2_1__55 P0_2_2__51 P0_3_0__44 P0_3_1__42 P0_4_0_0_0__42 P0_4_0_0_1__43}
+P0_1_1__65 [label = "", style = invisible]
+P0_1_1__64 -> P0_1_1__65 [label = <>, weight = 100, style = invisible]
+P0_1_0__64 -> P0_1_0__65 [label = <>, weight = 100]
+P0_0__57 -> P0_0__58 [label = <>, weight = 100]
+P__85 -> P__86 [label = <>, weight = 100]
+{rank = same; P__86 P0_0__58 P0_1_0__65 P0_1_1__65 P0_2_0__59 P0_2_1__55 P0_2_2__51 P0_3_0__44 P0_3_1__42 P0_4_0_0_0__42 P0_4_0_0_1__43}
 P0_4_0_0_1__43 -> P0_4_0_0_1__44 [label = <>, weight = 100]
 P0_4_0_0_1__44 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD><FONT COLOR="darkgreen">{152}</FONT><FONT COLOR="blue">get</FONT> revokedcerts(=attvid_4): else branch taken<br/>
 </TD></TR><TR><TD><FONT COLOR="darkgreen">{145}</FONT><FONT COLOR="blue">event</FONT> ValidGroupKeyRequestReceived(cask_4,<br/>
 attvid_4)</TD></TR><TR><TD><FONT COLOR="darkgreen">{150}</FONT><FONT COLOR="blue">event</FONT> ValidGroupPrivateKeySent(attvid_4,gsk(<br/>
 attvid_4,updatedgmsk_2),gpk(updatedgmsk_2))</TD></TR></TABLE>>]
 P0_4_0_0_1__44 -> P0_4_0_0_1__45 [label = <>, weight = 100]
-P__83 -> P__84 [label = <>, weight = 100]
-{rank = same; P__84 P0_4_0_0_1__44}
+P__86 -> P__87 [label = <>, weight = 100]
+{rank = same; P__87 P0_4_0_0_1__44}
 P0_4_0_0_1__45 -> P0_4_0_0_1__46 [label = <>, weight = 100]
 P0_4_0_0_0__42 -> P0_4_0_0_0__43 [label = <>, weight = 100]
 P0_3_1__43 [label = "", style = invisible]
@@ -1130,15 +1159,16 @@ P0_2_1__56 [label = "", style = invisible]
 P0_2_1__55 -> P0_2_1__56 [label = <>, weight = 100, style = invisible]
 P0_2_0__60 [label = "", style = invisible]
 P0_2_0__59 -> P0_2_0__60 [label = <>, weight = 100, style = invisible]
-P0_1_1__59 -> P0_1_1__60 [label = <>, weight = 100]
-P0_1_0__63 -> P0_1_0__64 [label = <>, weight = 100]
-P0_0__56 -> P0_0__57 [label = <>, weight = 100]
-P__84 -> P__85 [label = <>, weight = 100]
-{rank = same; P__85 P0_0__57 P0_1_0__64 P0_1_1__60 P0_2_0__60 P0_2_1__56 P0_2_2__52 P0_3_0__45 P0_3_1__43 P0_4_0_0_0__43 P0_4_0_0_1__46}
+P0_1_1__66 [label = "", style = invisible]
+P0_1_1__65 -> P0_1_1__66 [label = <>, weight = 100, style = invisible]
+P0_1_0__65 -> P0_1_0__66 [label = <>, weight = 100]
+P0_0__58 -> P0_0__59 [label = <>, weight = 100]
+P__87 -> P__88 [label = <>, weight = 100]
+{rank = same; P__88 P0_0__59 P0_1_0__66 P0_1_1__66 P0_2_0__60 P0_2_1__56 P0_2_2__52 P0_3_0__45 P0_3_1__43 P0_4_0_0_0__43 P0_4_0_0_1__46}
 P0_4_0_0_1__46 -> P0_4_0_0_1__47 [label = <>, weight = 100]
-P__85 -> P__86 [label = <>, weight = 100]
-{rank = same; P__86 P0_4_0_0_1__47}
-P0_4_0_0_1__47 -> P__86 [label = <~M_23>, arrowhead = normal]
+P__88 -> P__89 [label = <>, weight = 100]
+{rank = same; P__89 P0_4_0_0_1__47}
+P0_4_0_0_1__47 -> P__89 [label = <~M_24>, arrowhead = normal]
 P0_4_0_0_1__47 -> P0_4_0_0_1__48 [label = <>, weight = 100]
 P0_4_0_0_0__43 -> P0_4_0_0_0__44 [label = <>, weight = 100]
 P0_3_1__44 [label = "", style = invisible]
@@ -1151,11 +1181,12 @@ P0_2_1__57 [label = "", style = invisible]
 P0_2_1__56 -> P0_2_1__57 [label = <>, weight = 100, style = invisible]
 P0_2_0__61 [label = "", style = invisible]
 P0_2_0__60 -> P0_2_0__61 [label = <>, weight = 100, style = invisible]
-P0_1_1__60 -> P0_1_1__61 [label = <>, weight = 100]
-P0_1_0__64 -> P0_1_0__65 [label = <>, weight = 100]
-P0_0__57 -> P0_0__58 [label = <>, weight = 100]
-P__86 -> P__87 [label = <>, weight = 100]
-{rank = same; P__87 P0_0__58 P0_1_0__65 P0_1_1__61 P0_2_0__61 P0_2_1__57 P0_2_2__53 P0_3_0__46 P0_3_1__44 P0_4_0_0_0__44 P0_4_0_0_1__48}
+P0_1_1__67 [label = "", style = invisible]
+P0_1_1__66 -> P0_1_1__67 [label = <>, weight = 100, style = invisible]
+P0_1_0__66 -> P0_1_0__67 [label = <>, weight = 100]
+P0_0__59 -> P0_0__60 [label = <>, weight = 100]
+P__89 -> P__90 [label = <>, weight = 100]
+{rank = same; P__90 P0_0__60 P0_1_0__67 P0_1_1__67 P0_2_0__61 P0_2_1__57 P0_2_2__53 P0_3_0__46 P0_3_1__44 P0_4_0_0_0__44 P0_4_0_0_1__48}
 P0_4_0_0_1__49 [label = "", width = 0.3, height = 0.3]
 P0_4_0_0_1__48 -> P0_4_0_0_1__49 [label = <>, weight = 100]
 P0_4_0_0_0__44 -> P0_4_0_0_0__45 [label = <>, weight = 100]
@@ -1169,15 +1200,16 @@ P0_2_1__58 [label = "", style = invisible]
 P0_2_1__57 -> P0_2_1__58 [label = <>, weight = 100, style = invisible]
 P0_2_0__62 [label = "", style = invisible]
 P0_2_0__61 -> P0_2_0__62 [label = <>, weight = 100, style = invisible]
-P0_1_1__61 -> P0_1_1__62 [label = <>, weight = 100]
-P0_1_0__65 -> P0_1_0__66 [label = <>, weight = 100]
-P0_0__58 -> P0_0__59 [label = <>, weight = 100]
-P__87 -> P__88 [label = <>, weight = 100]
-{rank = same; P__88 P0_0__59 P0_1_0__66 P0_1_1__62 P0_2_0__62 P0_2_1__58 P0_2_2__54 P0_3_0__47 P0_3_1__45 P0_4_0_0_0__45}
+P0_1_1__68 [label = "", style = invisible]
+P0_1_1__67 -> P0_1_1__68 [label = <>, weight = 100, style = invisible]
+P0_1_0__67 -> P0_1_0__68 [label = <>, weight = 100]
+P0_0__60 -> P0_0__61 [label = <>, weight = 100]
+P__90 -> P__91 [label = <>, weight = 100]
+{rank = same; P__91 P0_0__61 P0_1_0__68 P0_1_1__68 P0_2_0__62 P0_2_1__58 P0_2_2__54 P0_3_0__47 P0_3_1__45 P0_4_0_0_0__45}
 P0_4_0_0_0__45 -> P0_4_0_0_0__46 [label = <>, weight = 100]
-P__88 -> P__89 [label = <>, weight = 100]
-{rank = same; P__89 P0_4_0_0_0__46}
-P0_4_0_0_0__46 -> P__89 [label = <~M_7 = aenc((groupkey_request,sign(groupkey_request,<br/>
+P__91 -> P__92 [label = <>, weight = 100]
+{rank = same; P__92 P0_4_0_0_0__46}
+P0_4_0_0_0__46 -> P__92 [label = <~M_7 = aenc((groupkey_request,sign(groupkey_request,<br/>
 vsk_6),cert(vid_14,pk(vsk_6),cask_4)),pk(cask_4))>, dir = back, arrowhead = normal]
 P0_4_0_0_0__46 -> P0_4_0_0_0__47 [label = <>, weight = 100]
 P0_3_1__46 [label = "", style = invisible]
@@ -1190,19 +1222,20 @@ P0_2_1__59 [label = "", style = invisible]
 P0_2_1__58 -> P0_2_1__59 [label = <>, weight = 100, style = invisible]
 P0_2_0__63 [label = "", style = invisible]
 P0_2_0__62 -> P0_2_0__63 [label = <>, weight = 100, style = invisible]
-P0_1_1__62 -> P0_1_1__63 [label = <>, weight = 100]
-P0_1_0__66 -> P0_1_0__67 [label = <>, weight = 100]
-P0_0__59 -> P0_0__60 [label = <>, weight = 100]
-P__89 -> P__90 [label = <>, weight = 100]
-{rank = same; P__90 P0_0__60 P0_1_0__67 P0_1_1__63 P0_2_0__63 P0_2_1__59 P0_2_2__55 P0_3_0__48 P0_3_1__46 P0_4_0_0_0__47}
+P0_1_1__69 [label = "", style = invisible]
+P0_1_1__68 -> P0_1_1__69 [label = <>, weight = 100, style = invisible]
+P0_1_0__68 -> P0_1_0__69 [label = <>, weight = 100]
+P0_0__61 -> P0_0__62 [label = <>, weight = 100]
+P__92 -> P__93 [label = <>, weight = 100]
+{rank = same; P__93 P0_0__62 P0_1_0__69 P0_1_1__69 P0_2_0__63 P0_2_1__59 P0_2_2__55 P0_3_0__48 P0_3_1__46 P0_4_0_0_0__47}
 P0_4_0_0_0__47 -> P0_4_0_0_0__48 [label = <>, weight = 100]
 P0_4_0_0_0__48 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD><FONT COLOR="darkgreen">{152}</FONT><FONT COLOR="blue">get</FONT> revokedcerts(=vid_14): else branch taken<br/>
 </TD></TR><TR><TD><FONT COLOR="darkgreen">{145}</FONT><FONT COLOR="blue">event</FONT> ValidGroupKeyRequestReceived(cask_4,<br/>
 vid_14)</TD></TR><TR><TD><FONT COLOR="darkgreen">{150}</FONT><FONT COLOR="blue">event</FONT> ValidGroupPrivateKeySent(vid_14,gsk(<br/>
 vid_14,updatedgmsk_2),gpk(updatedgmsk_2))</TD></TR></TABLE>>]
 P0_4_0_0_0__48 -> P0_4_0_0_0__49 [label = <>, weight = 100]
-P__90 -> P__91 [label = <>, weight = 100]
-{rank = same; P__91 P0_4_0_0_0__48}
+P__93 -> P__94 [label = <>, weight = 100]
+{rank = same; P__94 P0_4_0_0_0__48}
 P0_4_0_0_0__49 -> P0_4_0_0_0__50 [label = <>, weight = 100]
 P0_3_1__47 [label = "", style = invisible]
 P0_3_1__46 -> P0_3_1__47 [label = <>, weight = 100, style = invisible]
@@ -1214,15 +1247,16 @@ P0_2_1__60 [label = "", style = invisible]
 P0_2_1__59 -> P0_2_1__60 [label = <>, weight = 100, style = invisible]
 P0_2_0__64 [label = "", style = invisible]
 P0_2_0__63 -> P0_2_0__64 [label = <>, weight = 100, style = invisible]
-P0_1_1__63 -> P0_1_1__64 [label = <>, weight = 100]
-P0_1_0__67 -> P0_1_0__68 [label = <>, weight = 100]
-P0_0__60 -> P0_0__61 [label = <>, weight = 100]
-P__91 -> P__92 [label = <>, weight = 100]
-{rank = same; P__92 P0_0__61 P0_1_0__68 P0_1_1__64 P0_2_0__64 P0_2_1__60 P0_2_2__56 P0_3_0__49 P0_3_1__47 P0_4_0_0_0__50}
+P0_1_1__70 [label = "", style = invisible]
+P0_1_1__69 -> P0_1_1__70 [label = <>, weight = 100, style = invisible]
+P0_1_0__69 -> P0_1_0__70 [label = <>, weight = 100]
+P0_0__62 -> P0_0__63 [label = <>, weight = 100]
+P__94 -> P__95 [label = <>, weight = 100]
+{rank = same; P__95 P0_0__63 P0_1_0__70 P0_1_1__70 P0_2_0__64 P0_2_1__60 P0_2_2__56 P0_3_0__49 P0_3_1__47 P0_4_0_0_0__50}
 P0_4_0_0_0__50 -> P0_4_0_0_0__51 [label = <>, weight = 100]
-P__92 -> P__93 [label = <>, weight = 100]
-{rank = same; P__93 P0_4_0_0_0__51}
-P0_4_0_0_0__51 -> P__93 [label = <~M_24>, arrowhead = normal]
+P__95 -> P__96 [label = <>, weight = 100]
+{rank = same; P__96 P0_4_0_0_0__51}
+P0_4_0_0_0__51 -> P__96 [label = <~M_25>, arrowhead = normal]
 P0_4_0_0_0__51 -> P0_4_0_0_0__52 [label = <>, weight = 100]
 P0_3_1__48 [label = "", style = invisible]
 P0_3_1__47 -> P0_3_1__48 [label = <>, weight = 100, style = invisible]
@@ -1234,11 +1268,12 @@ P0_2_1__61 [label = "", style = invisible]
 P0_2_1__60 -> P0_2_1__61 [label = <>, weight = 100, style = invisible]
 P0_2_0__65 [label = "", style = invisible]
 P0_2_0__64 -> P0_2_0__65 [label = <>, weight = 100, style = invisible]
-P0_1_1__64 -> P0_1_1__65 [label = <>, weight = 100]
-P0_1_0__68 -> P0_1_0__69 [label = <>, weight = 100]
-P0_0__61 -> P0_0__62 [label = <>, weight = 100]
-P__93 -> P__94 [label = <>, weight = 100]
-{rank = same; P__94 P0_0__62 P0_1_0__69 P0_1_1__65 P0_2_0__65 P0_2_1__61 P0_2_2__57 P0_3_0__50 P0_3_1__48 P0_4_0_0_0__52}
+P0_1_1__71 [label = "", style = invisible]
+P0_1_1__70 -> P0_1_1__71 [label = <>, weight = 100, style = invisible]
+P0_1_0__70 -> P0_1_0__71 [label = <>, weight = 100]
+P0_0__63 -> P0_0__64 [label = <>, weight = 100]
+P__96 -> P__97 [label = <>, weight = 100]
+{rank = same; P__97 P0_0__64 P0_1_0__71 P0_1_1__71 P0_2_0__65 P0_2_1__61 P0_2_2__57 P0_3_0__50 P0_3_1__48 P0_4_0_0_0__52}
 P0_4_0_0_0__53 [label = "", width = 0.3, height = 0.3]
 P0_4_0_0_0__52 -> P0_4_0_0_0__53 [label = <>, weight = 100]
 P0_4_0_1__42 -> P0_4_0_1__43 [label = <>, weight = 100]
@@ -1256,15 +1291,16 @@ P0_2_1__62 [label = "", style = invisible]
 P0_2_1__61 -> P0_2_1__62 [label = <>, weight = 100, style = invisible]
 P0_2_0__66 [label = "", style = invisible]
 P0_2_0__65 -> P0_2_0__66 [label = <>, weight = 100, style = invisible]
-P0_1_1__65 -> P0_1_1__66 [label = <>, weight = 100]
-P0_1_0__69 -> P0_1_0__70 [label = <>, weight = 100]
-P0_0__62 -> P0_0__63 [label = <>, weight = 100]
-P__94 -> P__95 [label = <>, weight = 100]
-{rank = same; P__95 P0_0__63 P0_1_0__70 P0_1_1__66 P0_2_0__66 P0_2_1__62 P0_2_2__58 P0_3_0__51 P0_3_1__49 P0_4_0_0_0__54 P0_4_0_0_1__50 P0_4_0_1__43}
+P0_1_1__72 [label = "", style = invisible]
+P0_1_1__71 -> P0_1_1__72 [label = <>, weight = 100, style = invisible]
+P0_1_0__71 -> P0_1_0__72 [label = <>, weight = 100]
+P0_0__64 -> P0_0__65 [label = <>, weight = 100]
+P__97 -> P__98 [label = <>, weight = 100]
+{rank = same; P__98 P0_0__65 P0_1_0__72 P0_1_1__72 P0_2_0__66 P0_2_1__62 P0_2_2__58 P0_3_0__51 P0_3_1__49 P0_4_0_0_0__54 P0_4_0_0_1__50 P0_4_0_1__43}
 P0_4_0_1__43 -> P0_4_0_1__44 [label = <>, weight = 100]
-P__95 -> P__96 [label = <>, weight = 100]
-{rank = same; P__96 P0_4_0_1__44}
-P0_4_0_1__44 -> P__96 [label = <~M_24>, dir = back, arrowhead = normal]
+P__98 -> P__99 [label = <>, weight = 100]
+{rank = same; P__99 P0_4_0_1__44}
+P0_4_0_1__44 -> P__99 [label = <~M_25>, dir = back, arrowhead = normal]
 P0_4_0_1__44 -> P0_4_0_1__45 [label = <>, weight = 100]
 P0_4_0_0_1__51 [label = "", style = invisible]
 P0_4_0_0_1__50 -> P0_4_0_0_1__51 [label = <>, weight = 100, style = invisible]
@@ -1280,11 +1316,12 @@ P0_2_1__63 [label = "", style = invisible]
 P0_2_1__62 -> P0_2_1__63 [label = <>, weight = 100, style = invisible]
 P0_2_0__67 [label = "", style = invisible]
 P0_2_0__66 -> P0_2_0__67 [label = <>, weight = 100, style = invisible]
-P0_1_1__66 -> P0_1_1__67 [label = <>, weight = 100]
-P0_1_0__70 -> P0_1_0__71 [label = <>, weight = 100]
-P0_0__63 -> P0_0__64 [label = <>, weight = 100]
-P__96 -> P__97 [label = <>, weight = 100]
-{rank = same; P__97 P0_0__64 P0_1_0__71 P0_1_1__67 P0_2_0__67 P0_2_1__63 P0_2_2__59 P0_3_0__52 P0_3_1__50 P0_4_0_0_0__55 P0_4_0_0_1__51 P0_4_0_1__45}
+P0_1_1__73 [label = "", style = invisible]
+P0_1_1__72 -> P0_1_1__73 [label = <>, weight = 100, style = invisible]
+P0_1_0__72 -> P0_1_0__73 [label = <>, weight = 100]
+P0_0__65 -> P0_0__66 [label = <>, weight = 100]
+P__99 -> P__100 [label = <>, weight = 100]
+{rank = same; P__100 P0_0__66 P0_1_0__73 P0_1_1__73 P0_2_0__67 P0_2_1__63 P0_2_2__59 P0_3_0__52 P0_3_1__50 P0_4_0_0_0__55 P0_4_0_0_1__51 P0_4_0_1__45}
 P0_4_0_1__45 -> P0_4_0_1__46 [label = <>, weight = 100]
 P0_4_0_1__46 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD><FONT COLOR="darkgreen">{63}</FONT><FONT COLOR="blue">event</FONT> ValidGroupPrivateKeyReceived(vid_14,<br/>
 gsk(vid_14,updatedgmsk_2),gpk(updatedgmsk_2))</TD></TR></TABLE>>]
@@ -1321,15 +1358,16 @@ P0_2_1__64 [label = "", style = invisible]
 P0_2_1__63 -> P0_2_1__64 [label = <>, weight = 100, style = invisible]
 P0_2_0__68 [label = "", style = invisible]
 P0_2_0__67 -> P0_2_0__68 [label = <>, weight = 100, style = invisible]
-P0_1_1__67 -> P0_1_1__68 [label = <>, weight = 100]
-P0_1_0__71 -> P0_1_0__72 [label = <>, weight = 100]
-P0_0__64 -> P0_0__65 [label = <>, weight = 100]
-P__97 -> P__98 [label = <>, weight = 100]
-{rank = same; P__98 P0_0__65 P0_1_0__72 P0_1_1__68 P0_2_0__68 P0_2_1__64 P0_2_2__60 P0_3_0__53 P0_3_1__51 P0_4_0_0_0__56 P0_4_0_0_1__52 P0_4_0_1_0__48 P0_4_0_1_1_0__50}
+P0_1_1__74 [label = "", style = invisible]
+P0_1_1__73 -> P0_1_1__74 [label = <>, weight = 100, style = invisible]
+P0_1_0__73 -> P0_1_0__74 [label = <>, weight = 100]
+P0_0__66 -> P0_0__67 [label = <>, weight = 100]
+P__100 -> P__101 [label = <>, weight = 100]
+{rank = same; P__101 P0_0__67 P0_1_0__74 P0_1_1__74 P0_2_0__68 P0_2_1__64 P0_2_2__60 P0_3_0__53 P0_3_1__51 P0_4_0_0_0__56 P0_4_0_0_1__52 P0_4_0_1_0__48 P0_4_0_1_1_0__50}
 P0_4_0_1_1_0__50 -> P0_4_0_1_1_0__51 [label = <>, weight = 100]
-P__98 -> P__99 [label = <>, weight = 100]
-{rank = same; P__99 P0_4_0_1_1_0__51}
-P0_4_0_1_1_0__51 -> P__99 [label = <~X_4>, dir = back, arrowhead = normal]
+P__101 -> P__102 [label = <>, weight = 100]
+{rank = same; P__102 P0_4_0_1_1_0__51}
+P0_4_0_1_1_0__51 -> P__102 [label = <~X_4>, dir = back, arrowhead = normal]
 P0_4_0_1_1_0__51 -> P0_4_0_1_1_0__52 [label = <>, weight = 100]
 P0_4_0_1_0__49 [label = "", style = invisible]
 P0_4_0_1_0__48 -> P0_4_0_1_0__49 [label = <>, weight = 100, style = invisible]
@@ -1347,11 +1385,12 @@ P0_2_1__65 [label = "", style = invisible]
 P0_2_1__64 -> P0_2_1__65 [label = <>, weight = 100, style = invisible]
 P0_2_0__69 [label = "", style = invisible]
 P0_2_0__68 -> P0_2_0__69 [label = <>, weight = 100, style = invisible]
-P0_1_1__68 -> P0_1_1__69 [label = <>, weight = 100]
-P0_1_0__72 -> P0_1_0__73 [label = <>, weight = 100]
-P0_0__65 -> P0_0__66 [label = <>, weight = 100]
-P__99 -> P__100 [label = <>, weight = 100]
-{rank = same; P__100 P0_0__66 P0_1_0__73 P0_1_1__69 P0_2_0__69 P0_2_1__65 P0_2_2__61 P0_3_0__54 P0_3_1__52 P0_4_0_0_0__57 P0_4_0_0_1__53 P0_4_0_1_0__49 P0_4_0_1_1_0__52}
+P0_1_1__75 [label = "", style = invisible]
+P0_1_1__74 -> P0_1_1__75 [label = <>, weight = 100, style = invisible]
+P0_1_0__74 -> P0_1_0__75 [label = <>, weight = 100]
+P0_0__67 -> P0_0__68 [label = <>, weight = 100]
+P__102 -> P__103 [label = <>, weight = 100]
+{rank = same; P__103 P0_0__68 P0_1_0__75 P0_1_1__75 P0_2_0__69 P0_2_1__65 P0_2_2__61 P0_3_0__54 P0_3_1__52 P0_4_0_0_0__57 P0_4_0_0_1__53 P0_4_0_1_0__49 P0_4_0_1_1_0__52}
 P0_4_0_1_1_0__52 -> P0_4_0_1_1_0__53 [label = <>, weight = 100]
 P0_4_0_1_1_0__53 [shape = plaintext, label = <<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"> <TR><TD><FONT COLOR="darkgreen">{79}</FONT><FONT COLOR="blue">event</FONT> ValidMessageReceived(vid_14,a_17)</TD></TR></TABLE>>]
 P0_4_0_1_1_0__53 -> P0_4_0_1_1_0__54 [label = <>, weight = 100]
@@ -1385,13 +1424,13 @@ cask_4))</TD></TR><TR><TD>~X_3 = aenc((groupkey_request,sign(groupkey_request,~M
 ~M_6),~M)<br/>
 = aenc((groupkey_request,sign(groupkey_request,<br/>
 attsk_4),cert(attvid_4,pk(attsk_4),cask_4)),pk(<br/>
-cask_4))</TD></TR><TR><TD>~M_23 = aenc(((groupkey_response,attvid_4,gsk(<br/>
+cask_4))</TD></TR><TR><TD>~M_24 = aenc(((groupkey_response,attvid_4,gsk(<br/>
 attvid_4,updatedgmsk_2),gpk(updatedgmsk_2)),sign(<br/>
 (groupkey_response,attvid_4,gsk(attvid_4,updatedgmsk_2),<br/>
-gpk(updatedgmsk_2)),cask_4)),pk(attsk_4))</TD></TR><TR><TD>~M_24 = aenc(((groupkey_response,vid_14,gsk(vid_14,<br/>
+gpk(updatedgmsk_2)),cask_4)),pk(attsk_4))</TD></TR><TR><TD>~M_25 = aenc(((groupkey_response,vid_14,gsk(vid_14,<br/>
 updatedgmsk_2),gpk(updatedgmsk_2)),sign((groupkey_response,<br/>
 vid_14,gsk(vid_14,updatedgmsk_2),gpk(updatedgmsk_2)),<br/>
 cask_4)),pk(vsk_6))</TD></TR><TR><TD>~X_4 = (a_17,sign(a_17,a_18),pseudocert(pk(a_18),3-proj-4-tuple(<br/>
-1-proj-2-tuple(adec(~M_23,~M_5)))))<br/>
+1-proj-2-tuple(adec(~M_24,~M_5)))))<br/>
 = (a_17,sign(<br/>
 a_17,a_18),pseudocert(pk(a_18),gsk(attvid_4,updatedgmsk_2)))</TD></TR></TABLE>>]Abbrev -> P__0 [style = invisible, weight =100]}

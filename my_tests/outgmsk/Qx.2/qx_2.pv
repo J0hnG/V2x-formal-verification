@@ -287,7 +287,7 @@ let CARevoke(gmsk:gmskey, cask: skey, capk:pkey) =
 	new updatedgmsk:gmskey;
 	(* Start new phase: not revoked vehicles have to ask for a new key *)
 	phase 2;
-	(!CA(updatedgmsk, cask, capk) |phase 5; CAGroupMasterSecretKeyReveal(updatedgmsk)).
+	(!CA(updatedgmsk, cask, capk)).
 
 
 
@@ -318,6 +318,7 @@ process
 	)	
 	| !CA(gmsk, cask, capk)
 	| !CARevoke(gmsk, cask, capk)
+	| CAGroupMasterSecretKeyReveal(gmsk)
 	
 
 	
